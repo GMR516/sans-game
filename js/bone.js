@@ -47,7 +47,7 @@ Bone.prototype.collidesWithHeart = function() {
 
 		console.log(heart.vel_x, heart.vel_y);
 
-		if ((heart.vel_y == 0 || heart.vel_x == 0) && this.colour == "orange") {
+		if ((heart.vel_y == 0 && heart.vel_x == 0) && this.colour == "orange") {
 			return true;
 		} else if ((heart.vel_y != 0 || heart.vel_x != 0) && this.colour == "blue") {
 			return true;
