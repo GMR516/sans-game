@@ -83,35 +83,35 @@ Sans.prototype.sendGameOverMessage = function() {
 	var game = maruju.rootScene;
 	if (game.difficulty == "easy" && game.final_time < 15) {
 		this.queueText([
-			"WHAT?! Pathetic!",
-			"You'd better practice."
+			"QUOI? Pathétique.",
+			"Tu ferais mieux de t'entrainer."
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charalaugh.gif';
 	} else if (game.difficulty == "easy" && game.final_time >= 60) {
 		this.queueText([
-			"...not bad. Not bad at all.",
-			"This difficulty is too easy for you.",
+			"...pas mal. Pas mal du tout.",
+			"Ce niveau est trop facile pour toi.",
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charawide.png';
 	} else if (game.difficulty == "medium" && game.final_time >= 60 &&
 			   game.final_time < 180) {
 		this.queueText([
-			"Ugh, you're pretty go- OK at this.",
-			"Kick the difficulty up a notch."
+			"Tu es plutot bon a ça.",
+			"Augmente la difficulté d'un cran."
 		]);
 	} else if (game.difficulty == "medium" && game.final_time >= 180) {
 		this.queueText([
-			"I... I... don't understand.",
-			"How can I be so bad at aiming?"
+			"Je... Je... ne comprends pas.",
+			"Comment je peux être aussi mauvais a viser?"
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charawide.png';
 	} else if (game.difficulty == "hard" && game.final_time >= 60) {
 		this.queueText([
-			"You...",
-			"You have bested me. You win, Sans.",
+			"Tu...",
+			"Tu m'as battu. Tu as gagné, Sans...",
 			
 		]);
 		var image = document.getElementById('sansimage');
@@ -121,13 +121,13 @@ Sans.prototype.sendGameOverMessage = function() {
 var r_text = new Array ();
 r_text[0] = "Heh, heh.";
 r_text[1] = ":)";
-r_text[2] = "No one is standing between me and the souls now.";
-r_text[3] = "Easy.";
-r_text[4] = "You might want to retry that.";
-r_text[5] = "Good job. Not really.";
-r_text[6] = "Looks like I win.";
+r_text[2] = "Personne ne se tient entre les âmes et moi maintenant!";
+r_text[3] = "Facile.";
+r_text[4] = "Tu pourrais vouloir réesayer.";
+r_text[5] = "Bon travail. Pas vraiment.";
+r_text[6] = "Regarde comme j'ai gagné!";
 r_text[7] = ";D";
-r_text[8] = "I knew you wouldn't stand a chance.";
+r_text[8] = "Je savais que tu n'avais pas une seule chance.";
 var i = Math.floor(9*Math.random())
 		this.queueText([
 			r_text[i],
