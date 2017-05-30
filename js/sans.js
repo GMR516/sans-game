@@ -81,15 +81,17 @@ var sans = new Sans();
 
 Sans.prototype.sendGameOverMessage = function() {
 	var game = maruju.rootScene;
-	if (game.difficulty == "easy" && game.final_time < 10) {
+	if (game.difficulty == "easy" && game.final_time < 15) {
 		this.queueText([
 			"WHAT?! Pathetic!",
+			"You'd better practice."
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charalaugh.gif';
 	} else if (game.difficulty == "easy" && game.final_time >= 60) {
 		this.queueText([
 			"...not bad. Not bad at all.",
+			"This difficulty is too easy for you.",
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charawide.png';
@@ -97,10 +99,12 @@ Sans.prototype.sendGameOverMessage = function() {
 			   game.final_time < 180) {
 		this.queueText([
 			"Ugh, you're pretty go- OK at this.",
+			"Kick the difficulty up a notch."
 		]);
 	} else if (game.difficulty == "medium" && game.final_time >= 180) {
 		this.queueText([
 			"I... I... don't understand.",
+			"How can I be so bad at aiming?"
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charawide.png';
@@ -113,8 +117,20 @@ Sans.prototype.sendGameOverMessage = function() {
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charawide.png';
 	} else {
+		
+var r_text = new Array ();
+r_text[0] = "Heh, heh.";
+r_text[1] = ":)";
+r_text[2] = "No one is standing between me and the souls now.";
+r_text[3] = "Easy.";
+r_text[4] = "You might want to retry that.";
+r_text[5] = "Good job. Not really.";
+r_text[6] = "Looks like I win.";
+r_text[7] = ";D";
+r_text[8] = "I knew you wouldn't stand a chance.";
+var i = Math.floor(9*Math.random())
 		this.queueText([
-			"Heh heh, I knew you wouldn't stand a chance against me.",
+			r_text[i],
 		]);
 		var image = document.getElementById('sansimage');
 			image.src = 'img/charalaugh.gif';

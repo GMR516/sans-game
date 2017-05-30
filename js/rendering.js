@@ -91,7 +91,7 @@ var Maruju = function (element, width, height) {
 	this.clock = new THREE.Clock();
 
 	sans.queueText([
-		"You can't stop me, Sans."
+		"You're that comedian..."
 		
 	]);
 	var image = document.getElementById('sansimage');

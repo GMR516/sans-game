@@ -58,6 +58,14 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'DeterminationMono';
+  src: url('DeterminationMono.eot?#iefix') format('embedded-opentype'),  url('DeterminationMono.woff') format('woff'), url('DeterminationMono.ttf')  format('truetype'), url('DeterminationMono.svg#DeterminationMono') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 /* Retrieved from http://http://loudifier.com/comic-relief/
 

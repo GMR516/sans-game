@@ -5,9 +5,7 @@ function Heart() {
 
 		The position of a heart represents the center of the heart.
 	*/
-
-	this.sprite = null;
-
+	
 	this.board_x = 320;
 	this.board_y = 120;
 

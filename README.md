@@ -1,3 +1,3 @@
-# Currently just a placeholder.
+# Welcome to the Sans Simulator!
 
-There's actually nothing here right now. Sorry. :c
+I'm constantly improving and updating the game if it needs it. 

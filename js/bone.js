@@ -29,6 +29,8 @@ Bone.prototype.setColour = function(colour) {
 			this.sprite.material.color = new THREE.Color(0x00ffff); break;
 		case "orange":
 			this.sprite.material.color = new THREE.Color(0xff7f00); break;
+		case "red":
+			this.sprite.material.color = new THREE.Color(0xff0000); break;
 	}
 }
 
@@ -45,11 +47,13 @@ Bone.prototype.collidesWithHeart = function() {
 
 		console.log(heart.vel_x, heart.vel_y);
 
-		if (heart.vel_y == 0 && heart.vel_x == 0 && this.colour == "orange") {
+		if ((heart.vel_y == 0 && heart.vel_x == 0) && this.colour == "orange") {
 			return true;
 		} else if ((heart.vel_y != 0 || heart.vel_x != 0) && this.colour == "blue") {
 			return true;
 		} else if (this.colour == "white") {
+			return true;
+		}else if(this.colour == "red" && heart.vel_y == 0){
 			return true;
 		}
 

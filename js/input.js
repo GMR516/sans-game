@@ -94,7 +94,7 @@ InputManager.injectInto(document);
 function reset_game(difficulty) {
 	maruju.rootScene.resetGame(difficulty);
 	sans.queueText([
-		"You won't get in my way."
+		"You can't dodge forever."
 	]);
 	var image = document.getElementById('sansimage');
 			image.src = 'img/chara.png';

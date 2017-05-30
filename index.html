@@ -1,40 +1,63 @@
 <html>
 <head>
-	<title>Sans Simulator</title>
+	<title>Sans Simulator - HELP</title>
 
 	<link rel="stylesheet" href="css/undertale.css" />
 
 	<script type="text/javascript" src="lib/funcs.js"></script>
 	<script type="text/javascript" src="lib/three.min.js"></script>
 	<script type="text/javascript" src="lib/threex.keyboardstate.js"></script>
-
-	<script type="text/javascript" src="js/rendering.js"></script>
-	<script type="text/javascript" src="js/bone.js"></script>
-	<script type="text/javascript" src="js/bonesets.js"></script>
-	<script type="text/javascript" src="js/heart.js"></script>
-	<script type="text/javascript" src="js/sans.js"></script>
-	<script type="text/javascript" src="js/battle.js"></script>
-	<script type="text/javascript" src="js/input.js"></script>
-	<script type="text/javascript" src="js/menu.js"></script>
 	
-	
+	<style>
+	.howtoplay{
+	text-align: center;
+	font-family: "DeterminationMono";
+	font-size: 19px;
+	}
+	.howtoplaytitle{
+	text-align: center;
+	font-family: "DeterminationMono";
+	font-size: 28px;
+	color: red;
+	}
+	.foo {
+  width: 150px;
+  height: 20px;
+  margin: 3px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+.white{
+	background: #FFFFFF;
+	color: #FFFFFF;
+}
+.blue {
+	background: #13b4ff;
+}
+.bluetext{
+	color: #13b4ff;
+}
+.orange {
+	background: #FA6800;
+	color: #FA6800;
+}
+.orangetext{
+color: #FA6800;
+}
+.redtext{
+color: #FF0000;
+}
+.red {
+	background: #FF0000;
+	color: #FF0000;
+}
+	</style>
 </head>
 
 <body>
-	<noscript>Yeah... you can't run javascript. Sorry. If you don't know how to fix this problem, I don't want you playing my game anyway.</noscript>
-
 	<div id="gamebox">
-		<img class="sans" id="sansimage" src="img/chara.png" />
+		<img class="sans" id="sansimage" src="img/charalaugh.gif" />
 		<div id="speech_bubble" class="closed">
 
-		</div>
-
-		<div id="select_difficulty" class="closed">
-			<div id="select_text">Select your difficulty level.</div>
-			<div class="diff-option" id="option0">I want to dunk Chara.</div>
-			<div class="diff-option" id="option1">I want to fight the fallen child.</div>
-			<div class="diff-option" id="option2">I want to struggle for the timeline.</div>
-			<br>
 		</div>
 
 		<div id="gameplay_area" class="closed">
@@ -57,13 +80,6 @@
 
 	</div>
 
-	<audio id="bgm1" src="audio/megalovania.ogg" loop>
-		Your browser doesn't seem to support HTML5 music!
-	</audio>
-
-	<audio id="se_damage" src="audio/damage.wav"></audio>
-	<audio id="se_sans" src="audio/sans.wav"></audio>
-	<audio id="se_papyrus" src="audio/papyrus.wav"></audio>
 
 	<script type="text/javascript">
 		var maruju = null;
@@ -78,15 +94,41 @@
 		window.onload = start;
 	</script>
 
-	<div class="bottom-credits">
+	<div class="howtoplaytitle">
 		<p>
-		
-			<span>Original Endless Sans by Joe Zeng</span>
-			<span>Sans Simulator 0.1</span>
-			<span>This version of Endless Sans was created by GMR for fun.</span>
+		HELP
 		</p>
-		</div>
-
-
+	</div>
+	<div class="howtoplay">
+		<p>
+		Hello there! Welcome to the Sans Simulator!<br>If you can't tell by now, this is a fork of the (popular?) game 'Bad Time Simulator', which you can play right <a href="http://joezeng.github.io/endless-sans/" target="_blank">here</a>. Anyway, this game is a little different, so let's explain.
+		</p>
+	</div>
+	<div class="howtoplay">
+	<center><div class="foo white"></div></center>
+	<p>WHITE</p>
+	<p>The white obstacles damage you if you touch them.</p>
+	</div>
+	<hr>
+	<div class="howtoplay">
+	<center><div class="foo blue"></div></center>
+	<div class="bluetext"><p>BLUE</p></div>
+	<p>The blue obstacles damage you ONLY IF YOU'RE MOVING.</p>
+	</div>
+	<hr>
+	<div class="howtoplay">
+	<center><div class="foo orange"></div></center>
+	<div class="orangetext"><p>ORANGE</p></div>
+	<p>The orange obstacles damage you IF YOU'RE NOT MOVING.</p>
+	</div>
+	<div class="howtoplay">
+	<!--<center><div class="foo red"></div></center>
+	<div class="redtext"><p>RED</p></div>
+	<p>The red obstacles damage you ONLY IF YOU'RE ON THE GROUND.</p>-->
+		<p class="redtext">Use the Z button to advance text, and use the arrow keys to move and jump.</p>
+	</div>
+	<div class="howtoplaytitle">
+	<a href="http://gmr516.github.io/sans-game/game.html"><p>ALRIGHT, I'M GOOD. LET'S PLAY.</p></a>
+	</div>
 </body>
 </html>

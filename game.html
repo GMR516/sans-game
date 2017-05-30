@@ -1,0 +1,165 @@
+<html>
+<head>
+	<title>Sans Simulator</title>
+
+	<link rel="stylesheet" href="css/undertale.css" />
+
+	<script type="text/javascript" src="lib/funcs.js"></script>
+	<script type="text/javascript" src="lib/three.min.js"></script>
+	<script type="text/javascript" src="lib/threex.keyboardstate.js"></script>
+
+	<script type="text/javascript" src="js/rendering.js"></script>
+	<script type="text/javascript" src="js/bone.js"></script>
+	<script type="text/javascript" src="js/bonesets.js"></script>
+	<script type="text/javascript" src="js/heart.js"></script>
+	<script type="text/javascript" src="js/sans.js"></script>
+	<script type="text/javascript" src="js/battle.js"></script>
+	<script type="text/javascript" src="js/input.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	
+	
+	<style>
+	.howtoplay{
+	text-align: center;
+	font-family: "DeterminationMono";
+	font-size: 19px;
+	}
+	.howtoplaytitle{
+	text-align: center;
+	font-family: "DeterminationMono";
+	font-size: 28px;
+	color: red;
+	}
+	.foo {
+  width: 150px;
+  height: 20px;
+  margin: 3px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+.white{
+	background: #FFFFFF;
+	color: #FFFFFF;
+}
+.blue {
+	background: #13b4ff;
+}
+.bluetext{
+	color: #13b4ff;
+}
+.orange {
+	background: #FA6800;
+	color: #FA6800;
+}
+.orangetext{
+color: #FA6800;
+}
+.redtext{
+color: #FF0000;
+}
+.red {
+	background: #FF0000;
+	color: #FF0000;
+}
+.ufont{
+	font-family: "DeterminationMono";
+	font-size: 18px;
+}
+.mute{
+	font-family: "DeterminationMono";
+	font-size: 19px;
+	position: absolute;
+	text-align: right;
+	line-height: 15px;
+	bottom: 0;
+	left: calc(100% - 180px);
+	padding: 8px 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+	</style>
+</head>
+
+<body>
+	<noscript>Yeah... you can't run javascript. Sorry. If you don't know how to fix this problem, I don't want you playing my game anyway.</noscript>
+
+	<div id="gamebox">
+		<img class="sans" id="sansimage" src="img/chara.png" />
+		<div id="speech_bubble" class="closed">
+
+		</div>
+
+		<div id="select_difficulty" class="closed">
+		<div class="ufont">
+			<div id="select_text">Select your difficulty level.</div>
+			<div class="diff-option" id="option0">I want to dunk Chara.</div>
+			<div class="diff-option" id="option1">I want to fight the fallen child.</div>
+			<div class="diff-option" id="option2">I want to struggle for the timeline.</div>
+			<br>
+			</div>
+		</div>
+
+		<div id="gameplay_area" class="closed">
+			<div id="heartbox"></div>
+			<div>
+				<div class="stats" style="width: 80px;">SANS</div>
+				<div class="stats" style="width: 60px;">LV <span id="love">0</span></div>
+				<div class="stats">
+					<span class="tag">HP</span>
+					<div id="hp_bar">
+						<div id="hp_yellow_bar">
+						</div>
+					</div>
+					0<span id="hp">1</span> / 01
+				</div>
+				<br />
+				<div class="stats"><span class="tag">Time:</span> <span id="time">0.00</span></div>
+			</div>
+		</div>
+
+	</div>
+
+	<audio id="bgm1" src="audio/battletheme.mp3" loop>
+		Your browser doesn't seem to support HTML5 music!
+	</audio>
+	<audio id="gameover" src="audio/gameover.mp3"></audio>
+
+	<audio id="se_damage" src="audio/damage.wav"></audio>
+	<audio id="se_sans" src="audio/sans.wav"></audio>
+	<audio id="se_papyrus" src="audio/papyrus.wav"></audio>
+
+	<script type="text/javascript">
+		var maruju = null;
+		var textbox = null;
+
+		function start() {
+			menu.updateHeartPosition();
+			maruju = new Maruju(document.getElementById("heartbox"), 320, 120);
+			maruju.startDraw();
+		}
+
+		window.onload = start;
+	</script>
+	</div>
+				<div class="mute"><a href="#" onclick="document.getElementById('bgm1').muted = true;document.getElementById('gameover').muted = true;document.getElementById('se_sans').muted = true;document.getElementById('se_damage').muted = true; return false">Mute All Sounds</a></div>
+
+	<div class="bottom-credits">
+		<p>
+			<div class="redtext">
+			<span>Sans Simulator V0.3.0</span>
+			<br>
+			<br>
+			<p><strong>LATEST CHANGES</strong></p>
+			<li>You now just have to be moving to dodge Orange Obstacles</li>
+			<li>Removed Red Obstacles</li>
+			<li>Changed heart to blue</li>
+			<li>Added music n' sounds.</li>
+			<li>Increased time between the red and blue vertical bones and the next attack to reduce impossible scenarios.</li>
+			<br>
+			<a href="http://gmr516.github.io/sans-game/"><p>The heck is going on here? (HOW TO PLAY)</p></a>
+			</div>
+		</p>
+		</div>
+
+
+</body>
+</html>
